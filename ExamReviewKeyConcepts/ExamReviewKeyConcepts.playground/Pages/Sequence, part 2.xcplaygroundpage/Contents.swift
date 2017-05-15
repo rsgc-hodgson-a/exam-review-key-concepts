@@ -19,6 +19,17 @@ canvas.defaultBorderWidth = 2
 canvas.drawEllipse(centreX: canvas.width / 2, centreY: canvas.height / 2, width: 100, height: 100)
 
 // Your code below...
+//draw head
+canvas.fillColor = Color.white
+canvas.borderColor = Color.black
+canvas.defaultBorderWidth = 2
+canvas.drawEllipse(centreX: 150, centreY: 200, width: 75, height: 75)
+//draw ears
+canvas.fillColor = Color.black
+canvas.borderColor = Color.black
+canvas.defaultBorderWidth = 2
+
+
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.

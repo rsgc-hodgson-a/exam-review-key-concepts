@@ -22,6 +22,11 @@ import PlaygroundSupport
 //: ## Your code starts here
 // Create a new canvas
 let canvas = Canvas(width: 400, height: 600)
+//create text
+canvas.drawText(message: "blur", size: 150, x: 50, y: 400)
+
+//create loops down
+for y in stride(from: 0, to: <#T##T#>, by: <#T##T.Stride#>)
 
 
 //: ## Template code
