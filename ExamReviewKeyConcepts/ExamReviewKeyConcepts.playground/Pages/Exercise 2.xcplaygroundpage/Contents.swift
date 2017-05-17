@@ -22,6 +22,15 @@ import PlaygroundSupport
 //: ## Your code starts here
 // Create a new canvas
 let canvas = Canvas(width: 400, height: 600)
+//change starting point (0,0)
+canvas.translate(byX: 0, byY: 350)
+
+//create loop
+for y in stride(from: 0, through: -350, by: 10){
+//create text
+canvas.drawText(message: "undertones", size:75, x: 0, y: y)
+}
+
 
 
 //: ## Template code
