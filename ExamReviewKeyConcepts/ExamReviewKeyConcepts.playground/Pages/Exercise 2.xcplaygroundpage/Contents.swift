@@ -25,11 +25,22 @@ let canvas = Canvas(width: 400, height: 600)
 //change starting point (0,0)
 canvas.translate(byX: 0, byY: 350)
 
+//draw first "undertones" message
+ canvas.textColor = Color.init(hue: 0, saturation: 0, brightness: 0, alpha:85)
+canvas.drawText(message: "undertones", size: 70, x: 0, y: -10)
+
 //create loop
-for y in stride(from: 0, through: -350, by: 10){
-//create text
-canvas.drawText(message: "undertones", size:75, x: 0, y: y)
+for y in stride(from: -15, through: -100, by: -5){
+    //rotate
+    canvas.rotate(by: -5)
+    //make blur
+    canvas.textColor = Color.init(hue: 0, saturation: 0, brightness: 0, alpha:y + 115)
+   //create text
+    canvas.drawText(message: "undertones", size: 70, x: 0, y: y)
 }
+
+
+
 
 
 
