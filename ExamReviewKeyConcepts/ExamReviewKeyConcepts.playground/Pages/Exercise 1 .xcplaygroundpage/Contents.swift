@@ -30,12 +30,13 @@ canvas.drawRectangle(centreX: 200, centreY: 300, width: 400, height: 600)
 
 
 //create loops down
-for y in stride(from: 0, through: 355, by: 9){
+for y in stride(from: -40, through: 365, by: 9){
     //create blur
-    canvas.textColor = Color.init(hue: 0, saturation: 0, brightness: 0, alpha:35)
+    canvas.textColor = Color.init(hue: 0, saturation: 0, brightness: 0, alpha:25)
     //create text
-    canvas.drawText(message: "blur", size: 150, x: 50, y: y)
-    canvas.drawText(message: "blur", size: 150, x: 50, y: 340)
+    canvas.drawText(message: "blur", size: 175, x: 30, y: y)
+     canvas.textColor = Color.init(hue: 0, saturation: 0, brightness: 0, alpha:55)
+    canvas.drawText(message: "blur", size: 175, x: 30, y: 350)
 }
 
 
