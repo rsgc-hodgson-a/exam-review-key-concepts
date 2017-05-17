@@ -22,11 +22,25 @@ import PlaygroundSupport
 //: ## Your code starts here
 // Create a new canvas
 let canvas = Canvas(width: 400, height: 600)
-//create text
-canvas.drawText(message: "blur", size: 150, x: 50, y: 400)
+
+//create blue color background
+canvas.fillColor = Color.init(hue: 190,saturation: 97, brightness: 83, alpha: 100)
+//create background
+canvas.drawRectangle(centreX: 200, centreY: 300, width: 400, height: 600)
+
 
 //create loops down
-for y in stride(from: 0, to: <#T##T#>, by: <#T##T.Stride#>)
+for y in stride(from: 0, through: 355, by: 9){
+    //create blur
+    canvas.textColor = Color.init(hue: 0, saturation: 0, brightness: 0, alpha:35)
+    //create text
+    canvas.drawText(message: "blur", size: 150, x: 50, y: y)
+    canvas.drawText(message: "blur", size: 150, x: 50, y: 340)
+}
+
+
+
+
 
 
 //: ## Template code
