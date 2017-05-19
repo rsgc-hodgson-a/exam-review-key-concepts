@@ -22,6 +22,32 @@ import PlaygroundSupport
 //: ## Your code starts here
 // Create a new canvas
 let canvas = Canvas(width: 400, height: 600)
+//create background
+canvas.fillColor = Color.init(hue: 339, saturation: 85, brightness: 91, alpha: 100)
+canvas.drawRectangle(centreX: 200, centreY: 300, width: 400, height: 600)
+for i in 0...6 {
+    let size = 30 + 57*i
+    if i%2 == 0 {
+    canvas.borderColor = Color.black
+    }
+    else { canvas.borderColor = Color.white
+    }
+    canvas.drawShapesWithFill = false
+    canvas.defaultBorderWidth = 15
+    canvas.drawRectangle(centreX: 400, centreY: 400, width: size, height: size)
+    canvas.drawRectangle(centreX: 0, centreY: 400, width: size, height: size)
+    canvas.drawRectangle(centreX: 0, centreY: 0, width: size, height: size)
+    canvas.drawRectangle(centreX: 400, centreY: 0, width: size, height: size)
+}
+canvas.drawShapesWithFill = true
+canvas.drawShapesWithBorders = false
+canvas.fillColor = Color.init(hue: 339, saturation: 85, brightness: 91, alpha: 100)
+canvas.drawRectangle(centreX: 200, centreY: 507, width: 400, height: 200)
+
+canvas.textColor = Color.white
+canvas.drawText(message: "the runnaways", size: 50, x: 15, y: 410)
+
+
 
 
 //: ## Template code

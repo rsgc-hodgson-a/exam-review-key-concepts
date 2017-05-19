@@ -23,18 +23,19 @@ import PlaygroundSupport
 // Create a new canvas
 let canvas = Canvas(width: 400, height: 600)
 //change starting point (0,0)
-canvas.translate(byX: 0, byY: 350)
+canvas.translate(byX: 0, byY:375)
+
 
 //draw first "undertones" message
- canvas.textColor = Color.init(hue: 0, saturation: 0, brightness: 0, alpha:85)
-canvas.drawText(message: "undertones", size: 70, x: 0, y: -10)
+ canvas.textColor = Color.init(hue: 0, saturation: 0, brightness: 0, alpha:100)
+canvas.drawText(message: "undertones", size: 70, x: 5, y: -10)
 
 //create loop
-for y in stride(from: -15, through: -100, by: -5){
+for y in stride(from: -15, through: -500, by: -4){
     //rotate
-    canvas.rotate(by: -5)
+    canvas.rotate(by: -4)
     //make blur
-    canvas.textColor = Color.init(hue: 0, saturation: 0, brightness: 0, alpha:y + 115)
+    canvas.textColor = Color.init(hue: 0, saturation: 0, brightness: 0, alpha:y + 110)
    //create text
     canvas.drawText(message: "undertones", size: 70, x: 0, y: y)
 }
